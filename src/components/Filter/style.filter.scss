@@ -1,0 +1,91 @@
+$blue: #7367f0;
+$white: #fff;
+$wheat: #f8f8f8;
+$switch-bg-color: #e2e2e2;
+$form-switch-height: 1.7rem;
+
+.form-check {
+  padding-left: 1.7rem;
+}
+.form-check-input:not(:disabled):checked {
+  box-shadow: 0 2px 4px 0 rgb(115 103 240 / 40%);
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: 0.0825rem;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 1.285rem;
+  height: 1.285rem;
+  vertical-align: top;
+  background-position: 50%;
+  background-size: contain;
+  border: 1px solid #d8d6de;
+  float: left;
+  margin-left: -1.785rem;
+  appearance: none;
+  &:checked {
+    background-color: #7367f0 !important;
+    border-color: #7367f0 !important;
+  }
+}
+.form-check-input[type="checkbox"] {
+  border-radius: 3px;
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  &:checked {
+    &::after {
+      display: block;
+      left: 7px;
+      top: 4px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.dropdown-toggle {
+  &:active .dropdown-toggle::after {
+    rotate: 0deg;
+  }
+  span {
+    display: inline-block;
+    content: "";
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjNzM2N2YwJyBzdHJva2Utd2lkdGg9JzInIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcgY2xhc3M9J2ZlYXRoZXIgZmVhdGhlci1jaGV2cm9uLWRvd24nPjxwYXRoIGQ9J002IDlsNiA2IDYtNicvPjwvc3ZnPg==);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 16px;
+    padding: 0;
+    margin: 0;
+    width: 14px;
+    height: 11px;
+    position: relative;
+    top: 1px;
+  }
+}
+.dropdown-menu {
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+@keyframes growDown {
+  0% {
+      transform: scaleY(0)
+  }
+  80% {
+      transform: scaleY(1.1)
+  }
+  100% {
+      transform: scaleY(1)
+  }
+}

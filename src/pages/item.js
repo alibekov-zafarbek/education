@@ -1,11 +1,15 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
+import { Filter } from '../components'
 
 const Item = () => {
-  let {elem} = useParams()
-
+  let {itemID} = useParams()
+  console.log(itemID);
   return (
-    <div>Item {elem}</div>
+    <>
+      <Filter />
+      <h1>hello</h1>
+    </>
   )
 }
 
